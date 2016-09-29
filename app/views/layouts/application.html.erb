@@ -8,10 +8,10 @@
 </head>
 <body class = '<%= controller.controller_name %>'>
   <div id = "banner">
-    <div id = "img">
+    <div style = 'float: left; border: 2px solid blue' >
       <%=image_tag("logo.png")%>
     </div>
-   <div id="title"> <%= @page_title||"Pragmatic Bookshelf"%></div>
+   <div style = 'text-align: center'> <%= @page_title||"Pragmatic Bookshelf"%></div>
   </div>
 
   <div id = "columns">
@@ -21,7 +21,10 @@
         <li><a href=http://www..../faq">Questions</a></li>
         <li><a href=http://www..../news">News</a></li>
         <li><a href=http://www..../contact">Contact</a></li>
+
       </ul>
+      <p style = 'text-color: white'>Time = <%=Time.now %></p>
+
     </div>
     <div id = "main">
       <%= yield %>

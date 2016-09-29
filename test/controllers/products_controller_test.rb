@@ -20,6 +20,11 @@ class ProductsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:products)
   end
 
+  test "should get welcome title" do
+    get :index
+    assert_select 'h1', 'Listing products'
+  end
+
   test "should get new" do
     get :new
     assert_response :success
@@ -52,6 +57,8 @@ class ProductsControllerTest < ActionController::TestCase
     assert_difference('Product.count', -1) do
       delete :destroy, id: @product
     end
+
+
 
     assert_redirected_to products_path
   end

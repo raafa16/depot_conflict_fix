@@ -20,12 +20,9 @@
     border-bottom: 2px solid;
     font: small-caps 40px/40px "Times New Roman", serif;
     color: #282;
-    text-align: center;
 
-    img {
-        float: right;
-    }
 }
+
 
 #notice {
     color: #000 !important;
@@ -58,6 +55,7 @@ li {
 a {
     color: #bfb;
     font-size: small;
+    text-align: center;
 }
 }
 }
