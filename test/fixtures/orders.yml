@@ -2,12 +2,12 @@
 
 one:
   name: Dave Thomas
-  adress: MyText
-  email: dace@example.com
+  address: MyText
+  email: dave@example.org
   pay_type: Check
 
 two:
   name: MyString
-  adress: MyText
+  address: MyText
   email: MyString
   pay_type: MyString

@@ -14,7 +14,7 @@ class OrdersControllerTest < ActionController::TestCase
   test "requires item in cart" do
     get :new
     assert_redirected_to store_path
-    assert_equal flas[:notice], 'Your cart is empty'
+    assert_equal flash[:notice], 'Your cart is empty'
   end
 
   test "should get new" do
@@ -45,7 +45,7 @@ class OrdersControllerTest < ActionController::TestCase
   end
 
   test "should update order" do
-    patch :update, id: @order, order: { adress: @order.adress, email: @order.email, name: @order.name, pay_type: @order.pay_type }
+    patch :update, id: @order, order: { address: @order.address, email: @order.email, name: @order.name, pay_type: @order.pay_type }
     assert_redirected_to order_path(assigns(:order))
   end
 
