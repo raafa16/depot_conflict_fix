@@ -21,6 +21,7 @@ class ProductsController < ApplicationController
   def edit
   end
 
+
   # POST /products
   # POST /products.json
   def create
