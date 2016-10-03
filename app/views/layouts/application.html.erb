@@ -12,6 +12,7 @@
       <%=image_tag("logo.png")%>
     </div>
    <div style = 'text-align: center'> <%= @page_title||"Pragmatic Bookshelf"%></div>
+    <div style = 'float: right; font-size: 10px'><li><a>Today is <%=Time.now.ctime %></a></li></div>
   </div>
 
   <div id = "columns">
@@ -26,8 +27,9 @@
         <li><a href=http://www..../news">News</a></li>
         <li><a href=http://www..../contact">Contact</a></li>
 
+
       </ul>
-      <p style = 'text-color: white'>Time = <%=Time.now %></p>
+
 
     </div>
     <div id = "main">
