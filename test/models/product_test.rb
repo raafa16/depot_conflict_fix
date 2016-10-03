@@ -27,7 +27,7 @@ class ProductTest < ActiveSupport::TestCase
         product.errors[:price].join(';')
 
     product.price=1
-    assert product.invalid?
+    assert product.valid?
   end
   def new_product(image_url)
     Product.new(title: "My Book Title",
