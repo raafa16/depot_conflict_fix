@@ -11,7 +11,7 @@
     <div class='blue-box' >
       <%=image_tag("logo.png")%>
     </div>
-   <div style = 'text-align: center'> <%= @page_title||"Pragmatic Bookshelf"%></div>
+   <div style = 'text-align: center'> <%= @page_title||t('.title')%></div>
     <div style = 'float: right; font-size: 10px'><li><a>Today is <%=Time.now.ctime %></a></li></div>
   </div>
 
@@ -24,10 +24,10 @@
       <% end %>
 
       <ul>
-        <li><a href="http://www....">Home</a></li>
-        <li><a href="http://www..../faq">Questions</a></li>
-        <li><a href="http://www..../news">News</a></li>
-        <li><a href="http://www..../contact">Contact</a></li>
+        <li><a href="http://www...."><%= t('.home') %></a></li>
+        <li><a href="http://www..../faq"><%= t('.questions') %></a></li>
+        <li><a href="http://www..../news"><%= t('.news') %></a></li>
+        <li><a href="http://www..../contact"><%= t('.contact') %></a></li>
       </ul>
 
       <% if session[:user_id] %>
@@ -39,7 +39,7 @@
             <%= button_to 'Logout', logout_path, method: :delete %>
       <%else%>
           <ul>
-            <li><%= link_to 'I am an admin. Log in!', login_path %></li>
+            <li><%= link_to t('.iamadmin'), login_path %></li>
             </ul>
       <%end%>
     </div>
