@@ -59,7 +59,7 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user = User.find(user_params)
+    # @user = User.find(user_params)
     begin
     @user.destroy
     flash[:notice] = "User #{@user.name} deleted."
