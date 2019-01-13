@@ -20,3 +20,5 @@
 /.idea/*
 
 /config/database.yml
+
+/doc/*
